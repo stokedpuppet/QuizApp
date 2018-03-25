@@ -24,7 +24,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="There are three branches in the U.S. Federal Government. What makes up the Legislative branch?"
+        android:text="There are three branches in the U.S. Federal Government. Which of the following make up the Legislative branch?"
         android:textSize="22sp" />
     <CheckBox
         android:id="@+id/checkbox_q1_president"
@@ -367,6 +367,7 @@
     </RadioGroup>
 
     <Button
+        android:onClick="submitQuiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
