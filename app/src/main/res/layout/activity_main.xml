@@ -80,11 +80,13 @@
         android:textSize="22sp"
         />
     <RadioGroup
+        android:id="@+id/radio_group_q2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         >
         <RadioButton
+            android:id="@+id/radio_q2_75"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="75"
@@ -92,6 +94,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q2_200"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="200"
@@ -99,6 +102,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q2_50"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="50"
@@ -106,6 +110,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q2_100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
@@ -113,6 +118,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q2_435"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="435"
@@ -132,11 +138,13 @@
         android:text="How many members are there in the United States House of Representatives?"
         android:textSize="22sp" />
     <RadioGroup
+        android:id="@+id/radio_group_q3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         >
         <RadioButton
+            android:id="@+id/radio_q3_100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="100"
@@ -144,6 +152,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q3_435"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="435"
@@ -151,6 +160,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q3_500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="500"
@@ -158,6 +168,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q3_14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="14"
@@ -165,6 +176,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q3_60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="60"
@@ -202,11 +214,13 @@
         android:text="How long does a Supreme Court Justice get to serve?"
         android:textSize="22sp" />
     <RadioGroup
+        android:id="@+id/radio_group_q5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         >
         <RadioButton
+            android:id="@+id/radio_q5_6yrs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="6 years"
@@ -214,6 +228,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q5_long"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="As long as they want"
@@ -221,6 +236,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q5_4yrs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4 years"
@@ -228,6 +244,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q5_new_pres"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Until a new President is elected"
@@ -235,6 +252,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q5_20yrs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20 years"
@@ -272,11 +290,13 @@
         android:text="How many electoral votes are there?"
         android:textSize="22sp" />
     <RadioGroup
+        android:id="@+id/radio_group_q7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         >
         <RadioButton
+            android:id="@+id/radio_q7_150"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="150"
@@ -284,20 +304,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp" />
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="253"
-            android:textSize="16sp"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="538"
-            android:textSize="16sp"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"/>
-        <RadioButton
+            android:id="@+id/radio_q7_435"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="435"
@@ -305,6 +312,23 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q7_538"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="538"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="8dp"/>
+        <RadioButton
+            android:id="@+id/radio_q7_253"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="253"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="8dp"/>
+        <RadioButton
+            android:id="@+id/radio_q7_438"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="438"
@@ -325,11 +349,13 @@
         android:textSize="22sp"
         android:paddingTop="8dp"/>
     <RadioGroup
+        android:id="@+id/radio_group_q8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="8dp"
         >
         <RadioButton
+            android:id="@+id/radio_q8_20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="20"
@@ -337,6 +363,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q8_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="24"
@@ -344,6 +371,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q8_27"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="27"
@@ -351,6 +379,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q8_30"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="30"
@@ -358,6 +387,7 @@
             android:layout_marginBottom="8dp"
             android:paddingLeft="8dp"/>
         <RadioButton
+            android:id="@+id/radio_q8_31"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="31"
