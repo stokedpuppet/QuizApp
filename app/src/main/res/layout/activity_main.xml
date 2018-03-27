@@ -197,11 +197,12 @@
         android:text="Who becomes President if something happens to both the President and the Vice President?"
         android:textSize="22sp" />
     <EditText
+        android:id="@+id/q4_text_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:hint="Type Answer Here"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     int question1 = 0;
     int question2 = 0;
     int question3 = 0;
-    // TODO int question4 = 0;
+    int question4 = 0;
     int question5 = 0;
     // TODO int question6 = 0;
     int question7 = 0;
@@ -51,7 +52,13 @@ public class MainActivity extends AppCompatActivity {
         boolean q3Correct = q3Answer.isChecked();
         if (q3Correct)
             question3 = 1;
-        // TODO Checks if Question 04 is correct and updates Q4 variable if correct.
+        // Checks if Question 04 is correct and updates Q4 variable if correct.
+        EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
+        String q4Correct = q4Answer.getText().toString().toLowerCase();
+        if(q4Correct.equals("speaker of the house"))
+            question4 = 1;
+            else if (q4Correct.equals("the speaker of the house"))
+            question4 = 1;
         // Checks if Question 05 is correct and updates Q5 variable if correct.
         RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         boolean q5Correct = q5Answer.isChecked();
@@ -69,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if (q8Correct)
             question8 = 1;
         // Checks overall quiz score.
-        quizScore = question1 + question2 + question3 + question5 + question7 + question8;
+        quizScore = question1 + question2 + question3 + question4 + question5 + question7 + question8;
         // Posts results for quiz.
         String toastString = "You answered " + quizScore + " correctly out of 8.";
         toastString += "\nYou received a " + quizScore * 12.5;
