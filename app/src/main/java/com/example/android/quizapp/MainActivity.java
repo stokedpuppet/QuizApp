@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // Keeps a tally of correctly answered questions.
     int quizScore = 0;
-    // Is question 1 answered correctly.
+    // If correct value will be set to 1.
     int question1 = 0;
     int question2 = 0;
     int question3 = 0;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int question6 = 0;
     int question7 = 0;
     int question8 = 0;
+    // Holds the number from number picker.
     int q6Correct = 0;
 
 
