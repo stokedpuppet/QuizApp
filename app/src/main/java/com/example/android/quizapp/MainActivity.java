@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -17,14 +18,28 @@ public class MainActivity extends AppCompatActivity {
     int question3 = 0;
     int question4 = 0;
     int question5 = 0;
-    // TODO int question6 = 0;
+    int question6 = 0;
     int question7 = 0;
     int question8 = 0;
+    int q6Correct = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Initialize Number Picker
+        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
+        npQ6Answer.setMinValue(49);
+        npQ6Answer.setMaxValue(69);
+        npQ6Answer.setWrapSelectorWheel(false);
+        npQ6Answer.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+            @Override
+            public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                //Save the number selected from the Number Picker
+                q6Correct = newVal;
+            }
+        });
     }
 
 
@@ -55,16 +70,18 @@ public class MainActivity extends AppCompatActivity {
         // Checks if Question 04 is correct and updates Q4 variable if correct.
         EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
         String q4Correct = q4Answer.getText().toString().toLowerCase();
-        if(q4Correct.equals("speaker of the house"))
+        if (q4Correct.equals("speaker of the house"))
             question4 = 1;
-            else if (q4Correct.equals("the speaker of the house"))
+        else if (q4Correct.equals("the speaker of the house"))
             question4 = 1;
         // Checks if Question 05 is correct and updates Q5 variable if correct.
         RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         boolean q5Correct = q5Answer.isChecked();
         if (q5Correct)
             question5 = 1;
-        // TODO Checks if Question 06 is correct and updates Q6 variable if correct.
+        // Checks if Question 06 is correct and updates Q6 variable if correct.
+        if (q6Correct == 60)
+            question6 = 1;
         // Checks if Question 07 is correct and updates Q7 variable if correct.
         RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
         boolean q7Correct = q7Answer.isChecked();
@@ -76,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
         if (q8Correct)
             question8 = 1;
         // Checks overall quiz score.
-        quizScore = question1 + question2 + question3 + question4 + question5 + question7 + question8;
+        quizScore = question1 + question2 + question3 + question4 + question5 + question6 + question7 + question8;
         // Posts results for quiz.
         String toastString = "You answered " + quizScore + " correctly out of 8.";
         toastString += "\nYou received a " + quizScore * 12.5;
-        Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_LONG).show();
         // TODO clear question scores after toast and highlight correct answers.
     }
 
