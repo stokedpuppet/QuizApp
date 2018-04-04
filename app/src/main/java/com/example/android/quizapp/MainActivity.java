@@ -103,8 +103,6 @@ public class MainActivity extends AppCompatActivity {
         // Posts results for quiz.
         String toastString = "You received a " + quizScore * 12.5;
         toastString += "\n\nYou answered " + quizScore + " correctly out of 8.";
-        //Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_LONG).show();
-        // TODO clear question scores after toast and highlight correct answers.
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.custom_toast,
                 (ViewGroup) findViewById(R.id.toast_layout_root));
@@ -119,6 +117,17 @@ public class MainActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
+        // TODO clear question scores after toast and highlight correct answers.
+
+        q1SenateCheckbox.setBackgroundColor(0xFF00FF00);
+        q1HouseCheckbox.setBackgroundColor(0xFF00FF00);
+        q2Answer.setBackgroundColor(0xFF00FF00);
+        q3Answer.setBackgroundColor(0xFF00FF00);
+        q5Answer.setBackgroundColor(0xFF00FF00);
+        q7Answer.setBackgroundColor(0xFF00FF00);
+        q8Answer.setBackgroundColor(0xFF00FF00);
+
+
     }
 
     /**
