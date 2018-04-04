@@ -2,15 +2,20 @@ package com.example.android.quizapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    // Keeps a tally of correctly answered questions.
+    // Keeps a tally of all correctly answered questions.
     int quizScore = 0;
     // If correct value will be set to 1.
     int question1 = 0;
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
         npQ6Answer.setMinValue(49);
         npQ6Answer.setMaxValue(69);
-        npQ6Answer.setWrapSelectorWheel(false);
+        npQ6Answer.setWrapSelectorWheel(true);
         npQ6Answer.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
@@ -96,10 +101,24 @@ public class MainActivity extends AppCompatActivity {
         // Checks overall quiz score.
         quizScore = question1 + question2 + question3 + question4 + question5 + question6 + question7 + question8;
         // Posts results for quiz.
-        String toastString = "You answered " + quizScore + " correctly out of 8.";
-        toastString += "\nYou received a " + quizScore * 12.5;
-        Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_LONG).show();
+        String toastString = "You received a " + quizScore * 12.5;
+        toastString += "\n\nYou answered " + quizScore + " correctly out of 8.";
+        //Toast.makeText(getApplicationContext(), toastString, Toast.LENGTH_LONG).show();
         // TODO clear question scores after toast and highlight correct answers.
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
+
+        ImageView image = (ImageView) layout.findViewById(R.id.image);
+        image.setImageResource(R.drawable.congress_drawing);
+        TextView text = (TextView) layout.findViewById(R.id.text);
+        text.setText(toastString);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
     }
 
     /**

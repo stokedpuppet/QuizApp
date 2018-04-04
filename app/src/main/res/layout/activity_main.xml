@@ -9,437 +9,537 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#607D8B"
         android:orientation="vertical"
         android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:paddingTop="16dp">
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:text="Question #1" />
+            android:adjustViewBounds="true"
+            android:src="@drawable/government_image_2" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="There are three branches in the U.S. Federal Government. Which of the following make up the Legislative branch?"
-            android:textSize="22sp" />
 
-        <CheckBox
-            android:id="@+id/checkbox_q1_president"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="8dp"
-            android:text="President and Vice President"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@+id/checkbox_q1_court"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"
-            android:text="Supreme Court"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@+id/checkbox_q1_senate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"
-            android:text="Senate"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@+id/checkbox_q1_house"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"
-            android:text="House of Representatives"
-            android:textSize="16sp" />
-
-        <CheckBox
-            android:id="@+id/checkbox_q1_cabinet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:paddingLeft="8dp"
-            android:text="Cabinet"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How many members are there in the United States Senate?"
-            android:textSize="22sp" />
-
-        <RadioGroup
-            android:id="@+id/radio_group_q2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp">
-
-            <RadioButton
-                android:id="@+id/radio_q2_75"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="75"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q2_200"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="200"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q2_50"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="50"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q2_100"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="100"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q2_435"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="435"
-                android:textSize="16sp" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #3" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How many members are there in the United States House of Representatives?"
-            android:textSize="22sp" />
-
-        <RadioGroup
-            android:id="@+id/radio_group_q3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp">
-
-            <RadioButton
-                android:id="@+id/radio_q3_100"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="100"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q3_435"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="435"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q3_500"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="500"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q3_14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="14"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q3_60"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="60"
-                android:textSize="16sp" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #4" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Who becomes President if something happens to both the President and the Vice President?"
-            android:textSize="22sp" />
-
-        <EditText
-            android:id="@+id/q4_text_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
-            android:hint="Type Answer Here"
-            android:textSize="16sp" />
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Question #1"
+                android:textColor="#757575"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How long does a Supreme Court Justice get to serve?"
-            android:textSize="22sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which of the following make up the Legislative branch of the United States Government?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
 
-        <RadioGroup
-            android:id="@+id/radio_group_q5"
+            <CheckBox
+                android:id="@+id/checkbox_q1_president"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                android:text="President and Vice President"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_q1_court"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="8dp"
+                android:text="Supreme Court"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_q1_senate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="8dp"
+                android:text="Senate"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_q1_house"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="8dp"
+                android:text="House of Representatives"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_q1_cabinet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:paddingLeft="8dp"
+                android:text="Cabinet"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp">
-
-            <RadioButton
-                android:id="@+id/radio_q5_6yrs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="6 years"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q5_long"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="As long as they want"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q5_4yrs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="4 years"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q5_new_pres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="Until a new President is elected"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q5_20yrs"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="20 years"
-                android:textSize="16sp" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #6" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
-            android:text="How many votes are needed to pass a bill in the Senate?"
-            android:textSize="22sp" />
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
 
-        <NumberPicker
-            android:id="@+id/q6_number_picker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Question #2"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How many members are there in the United States Senate?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_q2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_q2_75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="75"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q2_200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="200"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q2_50"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="50"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q2_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="100"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q2_435"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="435"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginBottom="8dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp" />
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #7" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Question #3"
+                android:textColor="#757575"
+                android:textSize="14sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="How many electoral votes are there?"
-            android:textSize="22sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How many members are there in the United States House of Representatives?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
 
-        <RadioGroup
-            android:id="@+id/radio_group_q7"
+            <RadioGroup
+                android:id="@+id/radio_group_q3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_q3_100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="100"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q3_435"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="435"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q3_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="500"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q3_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="14"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q3_60"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="60"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/radio_q7_150"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Question #4"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who becomes President if something happens to both the President and the Vice President?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/q4_text_field"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="150"
+                android:hint="Type Answer Here"
+                android:imeOptions="actionDone"
                 android:textSize="16sp" />
+        </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radio_q7_435"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="435"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q7_538"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="538"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q7_253"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="253"
-                android:textSize="16sp" />
-
-            <RadioButton
-                android:id="@+id/radio_q7_438"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="438"
-                android:textSize="16sp" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="36dp"
-            android:text="Question #8" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp"
-            android:text="How many amendments are there in the Constitution?"
-            android:textSize="22sp" />
-
-        <RadioGroup
-            android:id="@+id/radio_group_q8"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="8dp">
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
 
-            <RadioButton
-                android:id="@+id/radio_q8_20"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Question #5"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How long does a Supreme Court Justice get to serve?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_q5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_q5_6yrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="6 years"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q5_long"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="As long as they want"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q5_4yrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="4 years"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q5_new_pres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="Until a new President is elected"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q5_20yrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="20 years"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="Question #6"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="20"
-                android:textSize="16sp" />
+                android:text="How many votes are needed to pass a bill in the Senate?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
 
-            <RadioButton
-                android:id="@+id/radio_q8_24"
+            <NumberPicker
+                android:id="@+id/q6_number_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="24"
-                android:textSize="16sp" />
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp" />
+        </LinearLayout>
 
-            <RadioButton
-                android:id="@+id/radio_q8_27"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="27"
-                android:textSize="16sp" />
+                android:paddingTop="8dp"
+                android:text="Question #7"
+                android:textColor="#757575"
+                android:textSize="14sp" />
 
-            <RadioButton
-                android:id="@+id/radio_q8_30"
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="30"
-                android:textSize="16sp" />
+                android:text="How many electoral votes are there?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
 
-            <RadioButton
-                android:id="@+id/radio_q8_31"
+            <RadioGroup
+                android:id="@+id/radio_group_q7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_q7_150"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="150"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q7_435"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="435"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q7_538"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="538"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q7_253"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="253"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q7_438"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="438"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_border"
+            android:orientation="vertical">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
-                android:text="31"
-                android:textSize="16sp" />
-        </RadioGroup>
+                android:paddingTop="8dp"
+                android:text="Question #8"
+                android:textColor="#757575"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:text="How many amendments are there in the Constitution?"
+                android:textColor="#212121"
+                android:textSize="22sp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_q8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_q8_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="20"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q8_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="24"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q8_27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="27"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q8_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="30"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radio_q8_31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:paddingLeft="8dp"
+                    android:text="31"
+                    android:textSize="16sp" />
+            </RadioGroup>
+        </LinearLayout>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
+            android:background="#CFD8DC"
             android:onClick="submitQuiz"
             android:text="Submit" />
 
