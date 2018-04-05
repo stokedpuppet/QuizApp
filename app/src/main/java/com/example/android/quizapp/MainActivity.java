@@ -145,6 +145,11 @@ public class MainActivity extends AppCompatActivity {
             q7Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         if (question8 == 0)
             q8Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        Button answersButton =(Button)findViewById(R.id.answers_button);
+        answersButton.setVisibility(View.VISIBLE); //To set visible
+        Button resetButton=(Button)findViewById(R.id.reset_button);
+
+        resetButton.setVisibility(View.VISIBLE); //To set visible
     }
 
     /**

@@ -529,22 +529,48 @@
                     android:id="@+id/radio_q8_31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="16dp"
                     android:paddingLeft="8dp"
                     android:text="31"
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/answers_button"
+                android:layout_height="wrap_content"
+                android:text="Answers"
+                android:background="@drawable/rounded_border"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentLeft="true"
+                android:visibility="invisible"/>
 
         <Button
             android:id="@+id/submit_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:background="#CFD8DC"
+            android:background="@drawable/rounded_border"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:onClick="submitQuiz"
             android:text="Submit" />
+            <Button
+                android:layout_width="wrap_content"
+                android:id="@+id/reset_button"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentRight="true"
+                android:text="Reset"
+                android:visibility="invisible"/>
+        </RelativeLayout>
 
 
     </LinearLayout>
