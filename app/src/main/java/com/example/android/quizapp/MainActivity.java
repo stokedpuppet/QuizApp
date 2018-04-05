@@ -119,38 +119,82 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(layout);
         toast.show();
 
-        // Shows correct answers for all incorrectly answered questions.
-        if (question1 == 0)
-            q1SenateCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
-        if (question1 == 0)
-            q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
-        if (question2 == 0)
-            q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        if (question3 == 0)
-            q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        if (question4 == 0)
-            q4Answer.setText("speaker of the house");
-        if (question4 == 0)
-            q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        // Removes focus from edit text to prevent scrolling up after submit.
-        q4Answer.clearFocus();
-        if (question5 == 0)
-            q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
-        if (question6 == 0)
-            npQ6Answer.setValue(60);
-        if (question6 == 0)
-            npQ6Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        if (question7 == 0)
-            q7Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        if (question8 == 0)
-            q8Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        Button answersButton =(Button)findViewById(R.id.answers_button);
-        answersButton.setVisibility(View.VISIBLE); //To set visible
-        Button resetButton=(Button)findViewById(R.id.reset_button);
 
+        // Removes focus from edit text to prevent scrolling.
+        q4Answer.clearFocus();
+        // Makes ANSWERS button and RESET button visible.
+        Button answersButton = (Button) findViewById(R.id.answers_button);
+        answersButton.setVisibility(View.VISIBLE); //To set visible
+        Button resetButton = (Button) findViewById(R.id.reset_button);
         resetButton.setVisibility(View.VISIBLE); //To set visible
     }
+
+    public void answers(View view) {
+        // TODO Scroll to top.
+        //View bannerImage = (View) findViewById(R.id.banner_image);
+        //bannerImage.requestFocus();
+        // Adds green background for correct answers.
+        CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
+        q1SenateCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
+        CheckBox q1HouseCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_house);
+        q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
+        RadioButton q2Answer = (RadioButton) findViewById(R.id.radio_q2_100);
+        q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        RadioButton q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
+        q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
+        q4Answer.setText("speaker of the house");
+        q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
+        q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
+        npQ6Answer.setValue(60);
+        npQ6Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
+        q7Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        RadioButton q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
+        q8Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+    }
+
+    public void reset(View view) {
+        // TODO Scroll to top.
+        //View bannerImage = (View) findViewById(R.id.banner_image);
+        //bannerImage.requestFocus();
+        //TODO uncheck checkboxes and radial buttons.
+
+        // Removes background for all correct answers.
+        CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
+        q1SenateCheckbox.setBackgroundColor(0);
+        CheckBox q1HouseCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_house);
+        q1HouseCheckbox.setBackgroundColor(0);
+        RadioButton q2Answer = (RadioButton) findViewById(R.id.radio_q2_100);
+        q2Answer.setBackgroundColor(0);
+        RadioButton q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
+        q3Answer.setBackgroundColor(0);
+        EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
+        q4Answer.setText("");
+        q4Answer.setBackgroundColor(0);
+        RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
+        q5Answer.setBackgroundColor(0);
+        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
+        npQ6Answer.setValue(49);
+        npQ6Answer.setBackgroundColor(0);
+        RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
+        q7Answer.setBackgroundColor(0);
+        RadioButton q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
+        q8Answer.setBackgroundColor(0);
+        question1 = 0;
+        question2 = 0;
+        question3 = 0;
+        question4 = 0;
+        question5 = 0;
+        question6 = 0;
+        question7 = 0;
+        question8 = 0;
+        quizScore = 0;
+
+    }
+
 
     /**
      * Checks answer for question 1.

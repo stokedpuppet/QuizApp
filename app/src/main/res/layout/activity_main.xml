@@ -10,8 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#607D8B"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
         android:orientation="vertical"
         android:paddingBottom="16dp"
         android:paddingLeft="8dp"
@@ -19,9 +17,13 @@
         android:paddingTop="16dp">
 
         <ImageView
+            android:id="@+id/banner_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:adjustViewBounds="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:src="@drawable/government_image_2" />
 
         <LinearLayout
@@ -535,41 +537,46 @@
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="wrap_content"
-                android:id="@+id/answers_button"
-                android:layout_height="wrap_content"
-                android:text="Answers"
-                android:background="@drawable/rounded_border"
-                android:layout_marginRight="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_alignParentLeft="true"
-                android:visibility="invisible"/>
 
-        <Button
-            android:id="@+id/submit_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:layout_centerHorizontal="true"
-            android:layout_marginRight="8dp"
-            android:layout_marginLeft="8dp"
-            android:onClick="submitQuiz"
-            android:text="Submit" />
             <Button
+                android:id="@+id/answers_button"
                 android:layout_width="wrap_content"
-                android:id="@+id/reset_button"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_border"
-                android:layout_marginRight="8dp"
+                android:layout_alignParentLeft="true"
                 android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/rounded_border"
+                android:onClick="answers"
+                android:text="Answers"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/rounded_border"
+                android:onClick="submitQuiz"
+                android:text="Submit" />
+
+            <Button
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/rounded_border"
+                android:onClick="reset"
                 android:text="Reset"
-                android:visibility="invisible"/>
+                android:visibility="invisible" />
         </RelativeLayout>
 
 
