@@ -1,11 +1,13 @@
 package com.example.android.quizapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -29,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     // Holds the number from number picker.
     int q6Correct = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     public void submitQuiz(View view) {
         // Checks status of Question 01 checkboxes.
@@ -100,7 +100,8 @@ public class MainActivity extends AppCompatActivity {
             question8 = 1;
         // Checks overall quiz score.
         quizScore = question1 + question2 + question3 + question4 + question5 + question6 + question7 + question8;
-        // Posts results for quiz.
+
+        // Posts results for quiz with custom toast message.
         String toastString = "You received a " + quizScore * 12.5;
         toastString += "\n\nYou answered " + quizScore + " correctly out of 8.";
         LayoutInflater inflater = getLayoutInflater();
@@ -117,28 +118,44 @@ public class MainActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(layout);
         toast.show();
-        // TODO clear question scores after toast and highlight correct answers.
 
-        q1SenateCheckbox.setBackgroundColor(0xFF00FF00);
-        q1HouseCheckbox.setBackgroundColor(0xFF00FF00);
-        q2Answer.setBackgroundColor(0xFF00FF00);
-        q3Answer.setBackgroundColor(0xFF00FF00);
-        q5Answer.setBackgroundColor(0xFF00FF00);
-        q7Answer.setBackgroundColor(0xFF00FF00);
-        q8Answer.setBackgroundColor(0xFF00FF00);
-
-
+        // Shows correct answers for all incorrectly answered questions.
+        if (question1 == 0)
+            q1SenateCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
+        if (question1 == 0)
+            q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
+        if (question2 == 0)
+            q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        if (question3 == 0)
+            q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        if (question4 == 0)
+            q4Answer.setText("speaker of the house");
+        if (question4 == 0)
+            q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        // Removes focus from edit text to prevent scrolling up after submit.
+        q4Answer.clearFocus();
+        if (question5 == 0)
+            q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
+        if (question6 == 0)
+            npQ6Answer.setValue(60);
+        if (question6 == 0)
+            npQ6Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        if (question7 == 0)
+            q7Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        if (question8 == 0)
+            q8Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
     }
 
     /**
      * Checks answer for question 1.
      * If only Senate and House checkboxes are checked then answer is correct.
      *
-     * @param president incorrect checkbox
-     * @param court     incorrect checkbox
-     * @param senate    correct checkbox
-     * @param house     correct checkbox
-     * @param cabinet   incorrect checkbox
+     * @param president checkbox
+     * @param court     checkbox
+     * @param senate    checkbox
+     * @param house     checkbox
+     * @param cabinet   checkbox
      * @return question1 has a value of 1 if answered correctly.
      */
     private int q1Score(boolean president, boolean court, boolean senate, boolean house, boolean cabinet) {
