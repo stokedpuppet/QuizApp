@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -131,9 +132,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void answers(View view) {
-        // TODO Scroll to top.
-        //View bannerImage = (View) findViewById(R.id.banner_image);
-        //bannerImage.requestFocus();
         // Adds green background for correct answers.
         CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
         q1SenateCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
@@ -158,9 +156,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void reset(View view) {
-        // TODO Scroll to top.
-        //View bannerImage = (View) findViewById(R.id.banner_image);
-        //bannerImage.requestFocus();
+        // Scroll to top.
+        ScrollView mainScrollView = (ScrollView)findViewById(R.id.scroll_view);
+        mainScrollView.fullScroll(ScrollView.FOCUS_UP);
         // Removes background for all correct answers.
         CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
         q1SenateCheckbox.setBackgroundColor(0);
