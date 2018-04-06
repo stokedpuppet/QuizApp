@@ -213,7 +213,11 @@ public class MainActivity extends AppCompatActivity {
         question8 = 0;
         // Clears tally of all correct answers.
         quizScore = 0;
-
+        // Resets ANSWERS button and RESET button to invisible.
+        Button answersButton = (Button) findViewById(R.id.answers_button);
+        answersButton.setVisibility(View.INVISIBLE); //To set visible
+        Button resetButton = (Button) findViewById(R.id.reset_button);
+        resetButton.setVisibility(View.INVISIBLE); //To set visible
     }
 
 
