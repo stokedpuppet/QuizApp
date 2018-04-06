@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -160,8 +161,6 @@ public class MainActivity extends AppCompatActivity {
         // TODO Scroll to top.
         //View bannerImage = (View) findViewById(R.id.banner_image);
         //bannerImage.requestFocus();
-        //TODO uncheck checkboxes and radial buttons.
-
         // Removes background for all correct answers.
         CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
         q1SenateCheckbox.setBackgroundColor(0);
@@ -172,17 +171,40 @@ public class MainActivity extends AppCompatActivity {
         RadioButton q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
         q3Answer.setBackgroundColor(0);
         EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
-        q4Answer.setText("");
         q4Answer.setBackgroundColor(0);
         RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         q5Answer.setBackgroundColor(0);
         NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
-        npQ6Answer.setValue(49);
         npQ6Answer.setBackgroundColor(0);
         RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
         q7Answer.setBackgroundColor(0);
         RadioButton q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
         q8Answer.setBackgroundColor(0);
+        // Deselect checkboxes.
+        CheckBox q1PresidentCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_president);
+        q1PresidentCheckbox.setChecked(false);
+        CheckBox q1CourtCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_court);
+        q1CourtCheckbox.setChecked(false);
+        CheckBox q1CabinetCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_cabinet);
+        q1CabinetCheckbox.setChecked(false);
+        q1SenateCheckbox.setChecked(false);
+        q1HouseCheckbox.setChecked(false);
+        // Deselect radio buttons.
+        RadioGroup q2RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q2);
+        q2RadioGroup.clearCheck();
+        RadioGroup q3RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q3);
+        q3RadioGroup.clearCheck();
+        RadioGroup q5RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q5);
+        q5RadioGroup.clearCheck();
+        RadioGroup q7RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q7);
+        q7RadioGroup.clearCheck();
+        RadioGroup q8RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q8);
+        q8RadioGroup.clearCheck();
+        // Clear Q4 EditText
+        q4Answer.setText("");
+        // Reset Q6 NumberPicker
+        npQ6Answer.setValue(49);
+        // Resets the correctness of each question.
         question1 = 0;
         question2 = 0;
         question3 = 0;
@@ -191,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
         question6 = 0;
         question7 = 0;
         question8 = 0;
+        // Clears tally of all correct answers.
         quizScore = 0;
 
     }
