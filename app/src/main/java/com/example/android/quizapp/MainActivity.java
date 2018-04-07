@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             question3 = 1;
         // Checks if Question 04 is correct and updates Q4 variable if correct.
         String q4Correct = q4Answer.getText().toString().toLowerCase();
-        if (q4Correct.equals(R.string.speaker_of_the_house))
+        if (q4Correct.equals(getString(R.string.speaker_of_the_house)))
             question4 = 1;
         else if (q4Correct.equals(getString(R.string.the_speaker_of_the_house)))
             question4 = 1;
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
         q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q4Answer.setText(R.string.speaker_of_the_house);
+        q4Answer.setText(getString(R.string.speaker_of_the_house));
         q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         npQ6Answer.setValue(60);
