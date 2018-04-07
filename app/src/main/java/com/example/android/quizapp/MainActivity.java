@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
             question3 = 1;
         // Checks if Question 04 is correct and updates Q4 variable if correct.
         String q4Correct = q4Answer.getText().toString().toLowerCase();
-        if (q4Correct.equals("speaker of the house"))
+        if (q4Correct.equals(R.string.speaker_of_the_house))
             question4 = 1;
-        else if (q4Correct.equals("the speaker of the house"))
+        else if (q4Correct.equals(getString(R.string.the_speaker_of_the_house)))
             question4 = 1;
         // Checks if Question 05 is correct and updates Q5 variable if correct.
         boolean q5Correct = q5Answer.isChecked();
@@ -126,8 +126,8 @@ public class MainActivity extends AppCompatActivity {
         quizScore = question1 + question2 + question3 + question4 + question5 + question6 + question7 + question8;
 
         // Posts results for quiz with custom toast message.
-        String toastString = "You received a " + quizScore * 12.5;
-        toastString += "\n\nYou answered " + quizScore + " correctly out of 8.";
+        String toastString = getString(R.string.you_received_a_) + " " + quizScore * 12.5;
+        toastString += "\n\n" + getString(R.string.you_answered) + " " + quizScore + " " + getString(R.string.correctly_out_of_8);
         LayoutInflater inflater = getLayoutInflater();
         View layout = inflater.inflate(R.layout.custom_toast,
                 (ViewGroup) findViewById(R.id.toast_layout_root));
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
         q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q4Answer.setText("speaker of the house");
+        q4Answer.setText(R.string.speaker_of_the_house);
         q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
         npQ6Answer.setValue(60);

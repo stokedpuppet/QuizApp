@@ -2,9 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/scroll_view"
     tools:context="com.example.android.quizapp.MainActivity">
 
     <LinearLayout
@@ -39,14 +39,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #1"
+                android:text="@string/question_1"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Which of the following make up the Legislative branch of the United States Government?"
+                android:text="@string/which_make_up_the_legislative_branch"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -57,7 +57,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
                 android:paddingLeft="8dp"
-                android:text="President and Vice President"
+                android:text="@string/president_and_vice_president"
                 android:textSize="16sp" />
 
             <CheckBox
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:paddingLeft="8dp"
-                android:text="Supreme Court"
+                android:text="@string/supreme_court"
                 android:textSize="16sp" />
 
             <CheckBox
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:paddingLeft="8dp"
-                android:text="Senate"
+                android:text="@string/senate"
                 android:textSize="16sp" />
 
             <CheckBox
@@ -84,7 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:paddingLeft="8dp"
-                android:text="House of Representatives"
+                android:text="@string/house_of_representatives"
                 android:textSize="16sp" />
 
             <CheckBox
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:paddingLeft="8dp"
-                android:text="Cabinet"
+                android:text="@string/cabinet"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -108,14 +108,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #2"
+                android:text="@string/question_2"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How many members are there in the United States Senate?"
+                android:text="@string/how_many_members_in_senate"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -131,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="75"
+                    android:text="@string/_75"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="200"
+                    android:text="@string/_200"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -149,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="50"
+                    android:text="@string/_50"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -158,7 +158,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="100"
+                    android:text="@string/_100"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -167,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="435"
+                    android:text="@string/_435"
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
@@ -183,14 +183,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #3"
+                android:text="@string/question_3"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How many members are there in the United States House of Representatives?"
+                android:text="@string/how_many_members_house"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -206,7 +206,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="100"
+                    android:text="@string/_100"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -215,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="435"
+                    android:text="@string/_435"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -224,7 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="500"
+                    android:text="@string/_500"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -233,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="14"
+                    android:text="@string/_14"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -242,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="60"
+                    android:text="@string/_60"
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
@@ -259,14 +259,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #4"
+                android:text="@string/question_4"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Who becomes President if something happens to both the President and the Vice President?"
+                android:text="@string/who_becomes_president"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -275,7 +275,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:hint="Type Answer Here"
+                android:hint="@string/type_answer_here"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:textSize="16sp" />
@@ -292,14 +292,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #5"
+                android:text="@string/question_5"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How long does a Supreme Court Justice get to serve?"
+                android:text="@string/how_long_justice_serve"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -315,7 +315,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="6 years"
+                    android:text="@string/_6_years"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -324,7 +324,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="As long as they want"
+                    android:text="@string/as_long_as_they_want"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -333,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="4 years"
+                    android:text="@string/_4_years"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -342,7 +342,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="Until a new President is elected"
+                    android:text="@string/until_a_new_president_is_elected"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -351,7 +351,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="20 years"
+                    android:text="@string/_20_years"
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
@@ -367,7 +367,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #6"
+                android:text="@string/question_6"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
@@ -375,7 +375,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="How many votes are needed to pass a bill in the Senate?"
+                android:text="@string/votes_to_pass_a_bill"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -399,14 +399,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #7"
+                android:text="@string/question_7"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How many electoral votes are there?"
+                android:text="@string/how_many_electoral_votes"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -422,7 +422,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="150"
+                    android:text="@string/_150"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -431,7 +431,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="435"
+                    android:text="@string/_435"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -440,7 +440,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="538"
+                    android:text="@string/_538"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -449,7 +449,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="253"
+                    android:text="@string/_253"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -458,7 +458,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="438"
+                    android:text="@string/_438"
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
@@ -474,7 +474,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="Question #8"
+                android:text="@string/question_8"
                 android:textColor="#757575"
                 android:textSize="14sp" />
 
@@ -482,7 +482,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                android:text="How many amendments are there in the Constitution?"
+                android:text="@string/how_many_amendments"
                 android:textColor="#212121"
                 android:textSize="22sp" />
 
@@ -498,7 +498,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="20"
+                    android:text="@string/_20"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -507,7 +507,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="24"
+                    android:text="@string/_24"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -516,7 +516,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="27"
+                    android:text="@string/_27"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -525,7 +525,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:paddingLeft="8dp"
-                    android:text="30"
+                    android:text="@string/_30"
                     android:textSize="16sp" />
 
                 <RadioButton
@@ -534,7 +534,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:paddingLeft="8dp"
-                    android:text="31"
+                    android:text="@string/_31"
                     android:textSize="16sp" />
             </RadioGroup>
         </LinearLayout>
@@ -553,7 +553,7 @@
                 android:layout_marginRight="8dp"
                 android:background="@drawable/rounded_border"
                 android:onClick="answers"
-                android:text="Answers"
+                android:text="@string/answers"
                 android:visibility="invisible" />
 
             <Button
@@ -565,7 +565,7 @@
                 android:layout_marginRight="8dp"
                 android:background="@drawable/rounded_border"
                 android:onClick="submitQuiz"
-                android:text="Submit" />
+                android:text="@string/submit" />
 
             <Button
                 android:id="@+id/reset_button"
@@ -576,7 +576,7 @@
                 android:layout_marginRight="8dp"
                 android:background="@drawable/rounded_border"
                 android:onClick="reset"
-                android:text="Reset"
+                android:text="@string/reset"
                 android:visibility="invisible" />
         </RelativeLayout>
 
