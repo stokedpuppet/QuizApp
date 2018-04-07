@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pad">16dp</dimen>
+    <dimen name="half_pad">8dp</dimen>
+    <dimen name="thin">2dp</dimen>
+    <dimen name="round">10dp</dimen>
+    <dimen name="some_pad">10dp</dimen>
+    <dimen name="toast_margin">22dp</dimen>
+    <dimen name="small">14sp</dimen>
+    <dimen name="large">22sp</dimen>
+    <dimen name="medium">16sp</dimen>
+</resources>

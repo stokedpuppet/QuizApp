@@ -4,19 +4,19 @@
 
     <!-- The width and color of the border. -->
     <stroke
-        android:width="2dp"
+        android:width="@dimen/thin"
         android:color="@color/light_gray" />
 
     <!-- The background color -->
     <solid android:color="@color/really_light_blue" />
 
     <!-- The desired corner radius. reduce it to keep it less rounded. -->
-    <corners android:radius="10dp" />
+    <corners android:radius="@dimen/round" />
 
     <padding
-        android:bottom="8dp"
-        android:left="8dp"
-        android:right="8dp"
-        android:top="8dp"/>
+        android:bottom="@dimen/half_pad"
+        android:left="@dimen/half_pad"
+        android:right="@dimen/half_pad"
+        android:top="@dimen/half_pad"/>
 
 </shape>

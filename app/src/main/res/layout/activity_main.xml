@@ -12,10 +12,10 @@
         android:layout_height="match_parent"
         android:background="@color/light_blue"
         android:orientation="vertical"
-        android:paddingBottom="16dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp"
-        android:paddingTop="16dp">
+        android:paddingBottom="@dimen/pad"
+        android:paddingLeft="@dimen/half_pad"
+        android:paddingRight="@dimen/half_pad"
+        android:paddingTop="@dimen/pad">
 
         <ImageView
             android:id="@+id/banner_image"
@@ -31,227 +31,227 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/half_pad"
+            android:layout_marginTop="@dimen/pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_1"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/which_make_up_the_legislative_branch"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <CheckBox
                 android:id="@+id/checkbox_q1_president"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="8dp"
-                android:paddingLeft="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
+                android:layout_marginTop="@dimen/half_pad"
+                android:paddingLeft="@dimen/half_pad"
                 android:text="@string/president_and_vice_president"
-                android:textSize="16sp" />
+                android:textSize="@dimen/medium" />
 
             <CheckBox
                 android:id="@+id/checkbox_q1_court"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
+                android:paddingLeft="@dimen/half_pad"
                 android:text="@string/supreme_court"
-                android:textSize="16sp" />
+                android:textSize="@dimen/medium" />
 
             <CheckBox
                 android:id="@+id/checkbox_q1_senate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
+                android:paddingLeft="@dimen/half_pad"
                 android:text="@string/senate"
-                android:textSize="16sp" />
+                android:textSize="@dimen/medium" />
 
             <CheckBox
                 android:id="@+id/checkbox_q1_house"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
+                android:paddingLeft="@dimen/half_pad"
                 android:text="@string/house_of_representatives"
-                android:textSize="16sp" />
+                android:textSize="@dimen/medium" />
 
             <CheckBox
                 android:id="@+id/checkbox_q1_cabinet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:paddingLeft="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
+                android:paddingLeft="@dimen/half_pad"
                 android:text="@string/cabinet"
-                android:textSize="16sp" />
+                android:textSize="@dimen/medium" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_2"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/how_many_members_in_senate"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <RadioGroup
                 android:id="@+id/radio_group_q2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp">
+                android:paddingTop="@dimen/half_pad">
 
                 <RadioButton
                     android:id="@+id/radio_q2_75"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_75"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_200"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_200"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_50"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_50"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_100"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_100"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q2_435"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_435"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
             </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_3"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/how_many_members_house"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <RadioGroup
                 android:id="@+id/radio_group_q3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp">
+                android:paddingTop="@dimen/half_pad">
 
                 <RadioButton
                     android:id="@+id/radio_q3_100"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_100"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_435"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_435"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_500"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_500"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_14"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_14"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q3_60"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_60"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
             </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
@@ -259,284 +259,284 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_4"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/who_becomes_president"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <EditText
                 android:id="@+id/q4_text_field"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
                 android:hint="@string/type_answer_here"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
-                android:textSize="16sp" />
+                android:textSize="@dimen/medium" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_5"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/how_long_justice_serve"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <RadioGroup
                 android:id="@+id/radio_group_q5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp">
+                android:paddingTop="@dimen/half_pad">
 
                 <RadioButton
                     android:id="@+id/radio_q5_6yrs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_6_years"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_long"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/as_long_as_they_want"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_4yrs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_4_years"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_new_pres"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/until_a_new_president_is_elected"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q5_20yrs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_20_years"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
             </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_6"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="@dimen/half_pad"
                 android:text="@string/votes_to_pass_a_bill"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <NumberPicker
                 android:id="@+id/q6_number_picker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginBottom="@dimen/half_pad"
+                android:layout_marginLeft="@dimen/pad"
+                android:layout_marginTop="@dimen/pad" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_7"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/how_many_electoral_votes"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <RadioGroup
                 android:id="@+id/radio_group_q7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp">
+                android:paddingTop="@dimen/half_pad">
 
                 <RadioButton
                     android:id="@+id/radio_q7_150"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_150"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q7_435"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_435"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q7_538"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_538"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q7_253"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_253"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q7_438"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_438"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
             </RadioGroup>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="@dimen/half_pad"
             android:background="@drawable/rounded_border"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/question_8"
                 android:textColor="@color/gray"
-                android:textSize="14sp" />
+                android:textSize="@dimen/small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:paddingTop="@dimen/half_pad"
                 android:text="@string/how_many_amendments"
                 android:textColor="@color/black"
-                android:textSize="22sp" />
+                android:textSize="@dimen/large" />
 
             <RadioGroup
                 android:id="@+id/radio_group_q8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp">
+                android:paddingTop="@dimen/half_pad">
 
                 <RadioButton
                     android:id="@+id/radio_q8_20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_20"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q8_24"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_24"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q8_27"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_27"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q8_30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/half_pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_30"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
 
                 <RadioButton
                     android:id="@+id/radio_q8_31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    android:paddingLeft="8dp"
+                    android:layout_marginBottom="@dimen/pad"
+                    android:paddingLeft="@dimen/half_pad"
                     android:text="@string/_31"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/medium" />
             </RadioGroup>
         </LinearLayout>
 
@@ -550,8 +550,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="@dimen/half_pad"
+                android:layout_marginRight="@dimen/half_pad"
                 android:background="@drawable/rounded_border"
                 android:onClick="answers"
                 android:text="@string/answers"
@@ -562,8 +562,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="@dimen/half_pad"
+                android:layout_marginRight="@dimen/half_pad"
                 android:background="@drawable/rounded_border"
                 android:onClick="submitQuiz"
                 android:text="@string/submit" />
@@ -573,8 +573,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
+                android:layout_marginLeft="@dimen/half_pad"
+                android:layout_marginRight="@dimen/half_pad"
                 android:background="@drawable/rounded_border"
                 android:onClick="reset"
                 android:text="@string/reset"
