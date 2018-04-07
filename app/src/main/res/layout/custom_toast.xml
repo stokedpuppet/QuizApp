@@ -7,12 +7,12 @@
     android:padding="10dp"
     android:background="@drawable/rounded_toast_border" >
 
-    <ImageView android:id="@+id/image"
+    <ImageView android:id="@+id/toast_image"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_marginBottom="22dp" />
 
-    <TextView android:id="@+id/text"
+    <TextView android:id="@+id/toast_text"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:textColor="#FFF"

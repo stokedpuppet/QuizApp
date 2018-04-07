@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     int question6 = 0;
     int question7 = 0;
     int question8 = 0;
-    // Declare variables for all question views.
+    // Declare variables for views.
     CheckBox q1PresidentCheckbox;
     CheckBox q1CourtCheckbox;
     CheckBox q1SenateCheckbox;
@@ -43,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
     NumberPicker npQ6Answer;
     RadioButton q7Answer;
     RadioButton q8Answer;
+    RadioGroup q2RadioGroup;
+    RadioGroup q3RadioGroup;
+    RadioGroup q5RadioGroup;
+    RadioGroup q7RadioGroup;
+    RadioGroup q8RadioGroup;
+    Button resetButton;
+    Button answersButton;
+    ScrollView mainScrollView;
+
+
     // Holds the number from number picker.
     int q6Correct = 0;
 
@@ -67,6 +77,12 @@ public class MainActivity extends AppCompatActivity {
         q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
         q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
+        // Initialize RadioGroups
+        q2RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q2);
+        q3RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q3);
+        q5RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q5);
+        q7RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q7);
+        q8RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q8);
         // Initialize EditText
         q4Answer = (EditText) findViewById(R.id.q4_text_field);
         //Initialize Number Picker
@@ -81,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
                 q6Correct = newVal;
             }
         });
+        //Initialize Buttons
+        answersButton = (Button) findViewById(R.id.answers_button);
+        resetButton = (Button) findViewById(R.id.reset_button);
+        // Initialize ScrollView
+        mainScrollView = (ScrollView) findViewById(R.id.scroll_view);
 
     }
 
@@ -129,28 +150,25 @@ public class MainActivity extends AppCompatActivity {
         String toastString = getString(R.string.you_received_a_) + " " + quizScore * 12.5;
         toastString += "\n\n" + getString(R.string.you_answered) + " " + quizScore + " " + getString(R.string.correctly_out_of_8);
         LayoutInflater inflater = getLayoutInflater();
-        View layout = inflater.inflate(R.layout.custom_toast,
+        View customToastLayout = inflater.inflate(R.layout.custom_toast,
                 (ViewGroup) findViewById(R.id.toast_layout_root));
 
-        ImageView image = (ImageView) layout.findViewById(R.id.image);
-        image.setImageResource(R.drawable.congress_drawing);
-        TextView text = (TextView) layout.findViewById(R.id.text);
-        text.setText(toastString);
+        ImageView toastImage = (ImageView) customToastLayout.findViewById(R.id.toast_image);
+        toastImage.setImageResource(R.drawable.congress_drawing);
+        TextView toastText = (TextView) customToastLayout.findViewById(R.id.toast_text);
+        toastText.setText(toastString);
 
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
-        toast.setView(layout);
+        toast.setView(customToastLayout);
         toast.show();
-
 
         // Removes focus from edit text to prevent scrolling.
         q4Answer.clearFocus();
         // Makes ANSWERS button and RESET button visible.
-        Button answersButton = (Button) findViewById(R.id.answers_button);
-        answersButton.setVisibility(View.VISIBLE); //To set visible
-        Button resetButton = (Button) findViewById(R.id.reset_button);
-        resetButton.setVisibility(View.VISIBLE); //To set visible
+        answersButton.setVisibility(View.VISIBLE);
+        resetButton.setVisibility(View.VISIBLE);
     }
 
     public void answers(View view) {
@@ -170,7 +188,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void reset(View view) {
         // Scroll to top.
-        ScrollView mainScrollView = (ScrollView) findViewById(R.id.scroll_view);
         mainScrollView.fullScroll(ScrollView.FOCUS_UP);
         // Removes background for all correct answers.
         q1SenateCheckbox.setBackgroundColor(0);
@@ -189,15 +206,10 @@ public class MainActivity extends AppCompatActivity {
         q1SenateCheckbox.setChecked(false);
         q1HouseCheckbox.setChecked(false);
         // Deselect radio buttons.
-        RadioGroup q2RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q2);
         q2RadioGroup.clearCheck();
-        RadioGroup q3RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q3);
         q3RadioGroup.clearCheck();
-        RadioGroup q5RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q5);
         q5RadioGroup.clearCheck();
-        RadioGroup q7RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q7);
         q7RadioGroup.clearCheck();
-        RadioGroup q8RadioGroup = (RadioGroup) findViewById(R.id.radio_group_q8);
         q8RadioGroup.clearCheck();
         // Clear Q4 EditText
         q4Answer.setText("");
@@ -215,10 +227,8 @@ public class MainActivity extends AppCompatActivity {
         // Clears tally of all correct answers.
         quizScore = 0;
         // Resets ANSWERS button and RESET button to invisible.
-        Button answersButton = (Button) findViewById(R.id.answers_button);
-        answersButton.setVisibility(View.INVISIBLE); //To set visible
-        Button resetButton = (Button) findViewById(R.id.reset_button);
-        resetButton.setVisibility(View.INVISIBLE); //To set visible
+        answersButton.setVisibility(View.INVISIBLE);
+        resetButton.setVisibility(View.INVISIBLE);
     }
 
 
@@ -249,8 +259,6 @@ public class MainActivity extends AppCompatActivity {
             question1 = 1;
         }
         return question1;
-
-
     }
 }
 
