@@ -52,4 +52,6 @@
     <string name="you_received_a_">You received a</string>
     <string name="you_answered">You answered</string>
     <string name="correctly_out_of_8">correctly out of 8.</string>
+    <string name="image_of_congress">a cartoon image of congress</string>
+    <string name="banner_image_of_congress">image of congress</string>
 </resources>

@@ -21,6 +21,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // Keeps a tally of all correctly answered questions.
     int quizScore = 0;
+
     // If question is answered correctly value will be set to 1.
     int question1 = 0;
     int question2 = 0;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     int question6 = 0;
     int question7 = 0;
     int question8 = 0;
+
     // Declare variables for views.
     CheckBox q1PresidentCheckbox;
     CheckBox q1CourtCheckbox;
@@ -51,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     Button resetButton;
     Button answersButton;
     ScrollView mainScrollView;
-
 
     // Holds the number from number picker.
     int q6Correct = 0;
@@ -173,17 +174,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void answers(View view) {
         // Adds green background for correct answers.
-        q1SenateCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        q1SenateCheckbox.setBackgroundColor(getResources().getColor(R.color.green));
+        q1HouseCheckbox.setBackgroundColor(getResources().getColor(R.color.green));
+        q2Answer.setBackgroundColor(getResources().getColor(R.color.green));
+        q3Answer.setBackgroundColor(getResources().getColor(R.color.green));
         q4Answer.setText(getString(R.string.speaker_of_the_house));
-        q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        q4Answer.setBackgroundColor(getResources().getColor(R.color.green));
+        q5Answer.setBackgroundColor(getResources().getColor(R.color.green));
         npQ6Answer.setValue(60);
-        npQ6Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q7Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        q8Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
+        npQ6Answer.setBackgroundColor(getResources().getColor(R.color.green));
+        q7Answer.setBackgroundColor(getResources().getColor(R.color.green));
+        q8Answer.setBackgroundColor(getResources().getColor(R.color.green));
     }
 
     public void reset(View view) {
@@ -230,7 +231,6 @@ public class MainActivity extends AppCompatActivity {
         answersButton.setVisibility(View.INVISIBLE);
         resetButton.setVisibility(View.INVISIBLE);
     }
-
 
     /**
      * Checks answer for question 1.
