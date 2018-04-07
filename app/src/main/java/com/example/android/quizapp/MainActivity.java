@@ -21,7 +21,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // Keeps a tally of all correctly answered questions.
     int quizScore = 0;
-    // If correct value will be set to 1.
+    // If question is answered correctly value will be set to 1.
     int question1 = 0;
     int question2 = 0;
     int question3 = 0;
@@ -30,6 +30,19 @@ public class MainActivity extends AppCompatActivity {
     int question6 = 0;
     int question7 = 0;
     int question8 = 0;
+    // Declare variables for all question views.
+    CheckBox q1PresidentCheckbox;
+    CheckBox q1CourtCheckbox;
+    CheckBox q1SenateCheckbox;
+    CheckBox q1HouseCheckbox;
+    CheckBox q1CabinetCheckbox;
+    RadioButton q2Answer;
+    RadioButton q3Answer;
+    EditText q4Answer;
+    RadioButton q5Answer;
+    NumberPicker npQ6Answer;
+    RadioButton q7Answer;
+    RadioButton q8Answer;
     // Holds the number from number picker.
     int q6Correct = 0;
 
@@ -37,8 +50,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Initialize Views
+        initializeViews();
+    }
+
+    private void initializeViews() {
+        // Initialize CheckBoxes
+        q1PresidentCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_president);
+        q1CourtCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_court);
+        q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
+        q1HouseCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_house);
+        q1CabinetCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_cabinet);
+        // Initialize correct Radio Buttons
+        q2Answer = (RadioButton) findViewById(R.id.radio_q2_100);
+        q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
+        q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
+        q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
+        q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
+        // Initialize EditText
+        q4Answer = (EditText) findViewById(R.id.q4_text_field);
         //Initialize Number Picker
-        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
+        npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
         npQ6Answer.setMinValue(49);
         npQ6Answer.setMaxValue(69);
         npQ6Answer.setWrapSelectorWheel(true);
@@ -49,41 +81,33 @@ public class MainActivity extends AppCompatActivity {
                 q6Correct = newVal;
             }
         });
+
     }
 
     public void submitQuiz(View view) {
         // Checks status of Question 01 checkboxes.
-        CheckBox q1PresidentCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_president);
         boolean isPresident = q1PresidentCheckbox.isChecked();
-        CheckBox q1CourtCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_court);
         boolean isCourt = q1CourtCheckbox.isChecked();
-        CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
         boolean isSenate = q1SenateCheckbox.isChecked();
-        CheckBox q1HouseCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_house);
         boolean isHouse = q1HouseCheckbox.isChecked();
-        CheckBox q1CabinetCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_cabinet);
         boolean isCabinet = q1CabinetCheckbox.isChecked();
         // Checks if Question 01 answer is correct and updates the Q1 variable if correct.
         question1 = q1Score(isPresident, isCourt, isSenate, isHouse, isCabinet);
         // Checks if Question 02 is correct and updates Q2 variable if correct.
-        RadioButton q2Answer = (RadioButton) findViewById(R.id.radio_q2_100);
         boolean q2Correct = q2Answer.isChecked();
         if (q2Correct)
             question2 = 1;
         // Checks if Question 03 is correct and updates Q3 variable if correct.
-        RadioButton q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
         boolean q3Correct = q3Answer.isChecked();
         if (q3Correct)
             question3 = 1;
         // Checks if Question 04 is correct and updates Q4 variable if correct.
-        EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
         String q4Correct = q4Answer.getText().toString().toLowerCase();
         if (q4Correct.equals("speaker of the house"))
             question4 = 1;
         else if (q4Correct.equals("the speaker of the house"))
             question4 = 1;
         // Checks if Question 05 is correct and updates Q5 variable if correct.
-        RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         boolean q5Correct = q5Answer.isChecked();
         if (q5Correct)
             question5 = 1;
@@ -91,12 +115,10 @@ public class MainActivity extends AppCompatActivity {
         if (q6Correct == 60)
             question6 = 1;
         // Checks if Question 07 is correct and updates Q7 variable if correct.
-        RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
         boolean q7Correct = q7Answer.isChecked();
         if (q7Correct)
             question7 = 1;
         // Checks if Question 08 is correct and updates Q8 variable if correct.
-        RadioButton q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
         boolean q8Correct = q8Answer.isChecked();
         if (q8Correct)
             question8 = 1;
@@ -133,57 +155,36 @@ public class MainActivity extends AppCompatActivity {
 
     public void answers(View view) {
         // Adds green background for correct answers.
-        CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
         q1SenateCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
-        CheckBox q1HouseCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_house);
         q1HouseCheckbox.setBackgroundColor(Color.parseColor("#8BC34A"));
-        RadioButton q2Answer = (RadioButton) findViewById(R.id.radio_q2_100);
         q2Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        RadioButton q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
         q3Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
         q4Answer.setText("speaker of the house");
         q4Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         q5Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
         npQ6Answer.setValue(60);
         npQ6Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
         q7Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
-        RadioButton q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
         q8Answer.setBackgroundColor(Color.parseColor("#8BC34A"));
     }
 
     public void reset(View view) {
         // Scroll to top.
-        ScrollView mainScrollView = (ScrollView)findViewById(R.id.scroll_view);
+        ScrollView mainScrollView = (ScrollView) findViewById(R.id.scroll_view);
         mainScrollView.fullScroll(ScrollView.FOCUS_UP);
         // Removes background for all correct answers.
-        CheckBox q1SenateCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_senate);
         q1SenateCheckbox.setBackgroundColor(0);
-        CheckBox q1HouseCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_house);
         q1HouseCheckbox.setBackgroundColor(0);
-        RadioButton q2Answer = (RadioButton) findViewById(R.id.radio_q2_100);
         q2Answer.setBackgroundColor(0);
-        RadioButton q3Answer = (RadioButton) findViewById(R.id.radio_q3_435);
         q3Answer.setBackgroundColor(0);
-        EditText q4Answer = (EditText) findViewById(R.id.q4_text_field);
         q4Answer.setBackgroundColor(0);
-        RadioButton q5Answer = (RadioButton) findViewById(R.id.radio_q5_long);
         q5Answer.setBackgroundColor(0);
-        NumberPicker npQ6Answer = (NumberPicker) findViewById(R.id.q6_number_picker);
         npQ6Answer.setBackgroundColor(0);
-        RadioButton q7Answer = (RadioButton) findViewById(R.id.radio_q7_538);
         q7Answer.setBackgroundColor(0);
-        RadioButton q8Answer = (RadioButton) findViewById(R.id.radio_q8_27);
         q8Answer.setBackgroundColor(0);
         // Deselect checkboxes.
-        CheckBox q1PresidentCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_president);
         q1PresidentCheckbox.setChecked(false);
-        CheckBox q1CourtCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_court);
         q1CourtCheckbox.setChecked(false);
-        CheckBox q1CabinetCheckbox = (CheckBox) findViewById(R.id.checkbox_q1_cabinet);
         q1CabinetCheckbox.setChecked(false);
         q1SenateCheckbox.setChecked(false);
         q1HouseCheckbox.setChecked(false);
