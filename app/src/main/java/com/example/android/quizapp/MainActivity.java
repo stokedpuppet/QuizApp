@@ -53,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     Button resetButton;
     Button answersButton;
     ScrollView mainScrollView;
+    View customToastLayout;
+    ImageView toastImage;
+    TextView toastText;
 
     // Holds the number from number picker.
     int q6Correct = 0;
@@ -103,6 +106,12 @@ public class MainActivity extends AppCompatActivity {
         resetButton = (Button) findViewById(R.id.reset_button);
         // Initialize ScrollView
         mainScrollView = (ScrollView) findViewById(R.id.scroll_view);
+        // Initialize toast views.
+        LayoutInflater inflater = getLayoutInflater();
+        customToastLayout = customToastLayout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) findViewById(R.id.toast_layout_root));
+        toastImage = (ImageView) customToastLayout.findViewById(R.id.toast_image);
+        toastText = (TextView) customToastLayout.findViewById(R.id.toast_text);
 
     }
 
@@ -150,15 +159,8 @@ public class MainActivity extends AppCompatActivity {
         // Posts results for quiz with custom toast message.
         String toastString = getString(R.string.you_received_a_) + " " + quizScore * 12.5;
         toastString += "\n\n" + getString(R.string.you_answered) + " " + quizScore + " " + getString(R.string.correctly_out_of_8);
-        LayoutInflater inflater = getLayoutInflater();
-        View customToastLayout = inflater.inflate(R.layout.custom_toast,
-                (ViewGroup) findViewById(R.id.toast_layout_root));
-
-        ImageView toastImage = (ImageView) customToastLayout.findViewById(R.id.toast_image);
         toastImage.setImageResource(R.drawable.congress_drawing);
-        TextView toastText = (TextView) customToastLayout.findViewById(R.id.toast_text);
         toastText.setText(toastString);
-
         Toast toast = new Toast(getApplicationContext());
         toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
         toast.setDuration(Toast.LENGTH_LONG);
