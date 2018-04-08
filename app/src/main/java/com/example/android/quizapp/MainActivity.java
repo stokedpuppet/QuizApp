@@ -21,17 +21,6 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     // Keeps a tally of all correctly answered questions.
     int quizScore = 0;
-
-    // If question is answered correctly value will be set to 1.
-    int question1 = 0;
-    int question2 = 0;
-    int question3 = 0;
-    int question4 = 0;
-    int question5 = 0;
-    int question6 = 0;
-    int question7 = 0;
-    int question8 = 0;
-
     // Declare variables for views.
     CheckBox q1PresidentCheckbox;
     CheckBox q1CourtCheckbox;
@@ -56,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
     View customToastLayout;
     ImageView toastImage;
     TextView toastText;
-
     // Holds the number from number picker.
     int q6Correct = 0;
 
@@ -112,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
                 (ViewGroup) findViewById(R.id.toast_layout_root));
         toastImage = (ImageView) customToastLayout.findViewById(R.id.toast_image);
         toastText = (TextView) customToastLayout.findViewById(R.id.toast_text);
-
     }
 
     public void submitQuiz(View view) {
@@ -122,40 +109,32 @@ public class MainActivity extends AppCompatActivity {
         boolean isSenate = q1SenateCheckbox.isChecked();
         boolean isHouse = q1HouseCheckbox.isChecked();
         boolean isCabinet = q1CabinetCheckbox.isChecked();
-        // Checks if Question 01 answer is correct and updates the Q1 variable if correct.
-        question1 = q1Score(isPresident, isCourt, isSenate, isHouse, isCabinet);
-        // Checks if Question 02 is correct and updates Q2 variable if correct.
-        boolean q2Correct = q2Answer.isChecked();
-        if (q2Correct)
-            question2 = 1;
-        // Checks if Question 03 is correct and updates Q3 variable if correct.
-        boolean q3Correct = q3Answer.isChecked();
-        if (q3Correct)
-            question3 = 1;
-        // Checks if Question 04 is correct and updates Q4 variable if correct.
-        String q4Correct = q4Answer.getText().toString().toLowerCase();
-        if (q4Correct.equals(getString(R.string.speaker_of_the_house)))
-            question4 = 1;
-        else if (q4Correct.equals(getString(R.string.the_speaker_of_the_house)))
-            question4 = 1;
-        // Checks if Question 05 is correct and updates Q5 variable if correct.
-        boolean q5Correct = q5Answer.isChecked();
-        if (q5Correct)
-            question5 = 1;
-        // Checks if Question 06 is correct and updates Q6 variable if correct.
-        if (q6Correct == 60)
-            question6 = 1;
-        // Checks if Question 07 is correct and updates Q7 variable if correct.
-        boolean q7Correct = q7Answer.isChecked();
-        if (q7Correct)
-            question7 = 1;
-        // Checks if Question 08 is correct and updates Q8 variable if correct.
-        boolean q8Correct = q8Answer.isChecked();
-        if (q8Correct)
-            question8 = 1;
-        // Checks overall quiz score.
-        quizScore = question1 + question2 + question3 + question4 + question5 + question6 + question7 + question8;
-
+        // Checks if Question 01 is correct and updates quiz score if correct.
+        quizScore = q1Score(isPresident, isCourt, isSenate, isHouse, isCabinet);
+        // Checks if Questions 02 - 08 are correct and updates the quiz score if correct.
+        if (q2Answer.isChecked()) {
+            quizScore += 1;
+        }
+        if (q3Answer.isChecked()) {
+            quizScore += 1;
+        }
+        if (q4Answer.getText().toString().toLowerCase().equals(getString(R.string.speaker_of_the_house))) {
+            quizScore += 1;
+        } else if (q4Answer.getText().toString().toLowerCase().equals(getString(R.string.the_speaker_of_the_house))) {
+            quizScore += 1;
+        }
+        if (q5Answer.isChecked()) {
+            quizScore += 1;
+        }
+        if (q6Correct == 60) {
+            quizScore += 1;
+        }
+        if (q7Answer.isChecked()) {
+            quizScore += 1;
+        }
+        if (q8Answer.isChecked()) {
+            quizScore += 1;
+        }
         // Posts results for quiz with custom toast message.
         String toastString = getString(R.string.you_received_a_) + " " + quizScore * 12.5;
         toastString += "\n\n" + getString(R.string.you_answered) + " " + quizScore + " " + getString(R.string.correctly_out_of_8);
@@ -166,7 +145,8 @@ public class MainActivity extends AppCompatActivity {
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(customToastLayout);
         toast.show();
-
+        // Reset quizScore
+        quizScore = 0;
         // Removes focus from edit text to prevent scrolling.
         q4Answer.clearFocus();
         // Makes ANSWERS button and RESET button visible.
@@ -218,15 +198,7 @@ public class MainActivity extends AppCompatActivity {
         q4Answer.setText("");
         // Reset Q6 NumberPicker
         npQ6Answer.setValue(49);
-        // Resets the correctness of each question.
-        question1 = 0;
-        question2 = 0;
-        question3 = 0;
-        question4 = 0;
-        question5 = 0;
-        question6 = 0;
-        question7 = 0;
-        question8 = 0;
+        q6Correct = 0;
         // Clears tally of all correct answers.
         quizScore = 0;
         // Resets ANSWERS button and RESET button to invisible.
@@ -258,9 +230,9 @@ public class MainActivity extends AppCompatActivity {
         if (cabinet)
             checkboxes += 1;
         if (checkboxes == 2 && senate && house) {
-            question1 = 1;
+            quizScore += 1;
         }
-        return question1;
+        return quizScore;
     }
 }
 
