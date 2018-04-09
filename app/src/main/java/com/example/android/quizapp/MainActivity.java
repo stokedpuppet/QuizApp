@@ -103,14 +103,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void submitQuiz(View view) {
-        // Checks status of Question 01 checkboxes.
+        // Checks if Question 01 is correct and updates quiz score if correct.
         boolean isPresident = q1PresidentCheckbox.isChecked();
         boolean isCourt = q1CourtCheckbox.isChecked();
         boolean isSenate = q1SenateCheckbox.isChecked();
         boolean isHouse = q1HouseCheckbox.isChecked();
         boolean isCabinet = q1CabinetCheckbox.isChecked();
-        // Checks if Question 01 is correct and updates quiz score if correct.
-        quizScore = q1Score(isPresident, isCourt, isSenate, isHouse, isCabinet);
+        if (isSenate && isHouse && !isPresident && !isCourt && !isCabinet) {
+            quizScore += 1;
+        }
         // Checks if Questions 02 - 08 are correct and updates the quiz score if correct.
         if (q2Answer.isChecked()) {
             quizScore += 1;
@@ -206,33 +207,5 @@ public class MainActivity extends AppCompatActivity {
         resetButton.setVisibility(View.INVISIBLE);
     }
 
-    /**
-     * Checks answer for question 1.
-     * If only Senate and House checkboxes are checked then answer is correct.
-     *
-     * @param president checkbox
-     * @param court     checkbox
-     * @param senate    checkbox
-     * @param house     checkbox
-     * @param cabinet   checkbox
-     * @return question1 has a value of 1 if answered correctly.
-     */
-    private int q1Score(boolean president, boolean court, boolean senate, boolean house, boolean cabinet) {
-        int checkboxes = 0;
-        if (president)
-            checkboxes += 1;
-        if (court)
-            checkboxes += 1;
-        if (senate)
-            checkboxes += 1;
-        if (house)
-            checkboxes += 1;
-        if (cabinet)
-            checkboxes += 1;
-        if (checkboxes == 2 && senate && house) {
-            quizScore += 1;
-        }
-        return quizScore;
-    }
 }
 
